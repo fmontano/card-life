@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/reset"
+        android:title="Reset"
+        app:showAsAction="always"/>
+            <item android:id="@+id/totals"
+                android:title="Starting Total">
+                    <menu>
+                            <item android:id="@+id/start_zero"
+                                android:title="0"></item>
+                            <item android:id="@+id/start_ten"
+                                android:title="10"></item>
+                            <item android:id="@+id/start_twenty"
+                                android:title="20"></item>
+                            <item android:id="@+id/start_forty"
+                                android:title="40"></item>
+                    </menu>
+
+            </item>
+            <item android:id="@+id/colors"
+                android:title="Choose Colors">
+            </item>
+        <!--
+            <item android:id="@+id/about"
+                android:title="About">
+            </item>
+            -->
+</menu>
