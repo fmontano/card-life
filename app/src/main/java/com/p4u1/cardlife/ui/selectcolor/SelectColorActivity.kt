@@ -1,4 +1,4 @@
-package com.p4u1.cardlife
+package com.p4u1.cardlife.ui.selectcolor
 
 import android.app.Activity
 import android.content.Intent
@@ -6,7 +6,11 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
-import android.view.*
+import android.view.MenuItem
+import android.view.View
+import android.view.Window
+import android.view.WindowManager
+import com.p4u1.cardlife.R
 import kotlinx.android.synthetic.main.activity_select_color.*
 
 /**
@@ -189,7 +193,7 @@ class SelectColorActivity : AppCompatActivity() {
     val colorSet : HashMap<String, Color> = hashMapOf()
 
     companion object {
-        public fun getColors() : MutableList<Int> {
+        fun getColors() : MutableList<Int> {
             var result = mutableListOf<Int>()
             result.add(Color.BLACK)
             result.add(Color.WHITE)

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000"
-    tools:context=".FullscreenActivity"
-    >
+    tools:context=".ui.main.MainActivity"
+    android:focusable="true">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -27,18 +28,21 @@
             android:layout_weight="1"
             android:gravity="center"
             android:rotation="180"
-            android:text="20"
+            tools:text="20"
+            android:clickable="false"
             android:textAlignment="center"
-            style="@style/BigNumbers"
- />
+            android:duplicateParentState="true"
+            style="@style/BigNumbers" />
         <TextView
             android:id="@+id/bottom_life_label"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="20"
+            tools:text="20"
+            android:clickable="false"
             android:textAlignment="center"
+            android:duplicateParentState="true"
             style="@style/BigNumbers"
             android:layout_marginTop="80sp"/>
 
@@ -58,6 +62,10 @@
                     android:id="@+id/top_plus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="?actionBarSize"
+                    android:paddingBottom="?actionBarSize"
+                    android:paddingStart="@dimen/margin_default"
+                    android:paddingEnd="@dimen/margin_default"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
                     android:text="+"
@@ -71,7 +79,11 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="right|center_vertical"
+                    android:paddingStart="@dimen/margin_default"
+                    android:paddingEnd="@dimen/margin_default"
                     android:text="&#8211;"
+                    android:layout_marginTop="?actionBarSize"
+                    android:paddingBottom="?actionBarSize"
                     android:translationY="-12sp"
                     style="@style/PlusAndMinus"
                     />
@@ -81,12 +93,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="Card Life"
+                android:text="@string/app_name"
                 android:textStyle="normal"
                 android:textColor="#ffffff"
                 android:background="#000000"
-                android:textSize="30sp"
-                />
+                android:clickable="false"
+                android:textSize="30sp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -100,6 +112,10 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="left|center_vertical"
+                    android:layout_marginBottom="?actionBarSize"
+                    android:paddingStart="@dimen/margin_default"
+                    android:paddingEnd="@dimen/margin_default"
+                    android:paddingTop="?actionBarSize"
                     android:text="&#8211;"
                     style="@style/PlusAndMinus"
                     />
@@ -109,6 +125,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_marginBottom="?actionBarSize"
+                    android:paddingStart="@dimen/margin_default"
+                    android:paddingEnd="@dimen/margin_default"
+                    android:paddingTop="?actionBarSize"
                     android:gravity="right|center_vertical"
                     android:text="+"
                     style="@style/PlusAndMinus"
@@ -143,8 +163,7 @@
             android:layout_gravity="bottom|center_horizontal"
             android:background="@color/black_overlay"
             android:orientation="horizontal"
-            tools:ignore="UselessParent"
-            >
+            tools:ignore="UselessParent">
 
             <Button
                 android:id="@+id/dummy_button"
